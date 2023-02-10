@@ -12,7 +12,7 @@ Treasure.init(
         autoIncrement: true,
       },
       name:{
-        type: DataType.STRING,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       description: {
