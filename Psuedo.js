@@ -3,10 +3,14 @@
 //  Collect Treasures in the form of
 //  Items weapons/1 Hand or two Hand/Headgear/Armor/FootGear = gear_number
 
+//STRETCH GOAL: special cards that do things once
+
 //Tables Door Cards
 //  Go though "DOOR CARDS" in the form of
 //  Monsters Cards 
 //  Curses Cards
+//  Class Cards
+//  Race Cards
 
 //Tables Player Inventory
 //  5 CARD MAX end of turn
