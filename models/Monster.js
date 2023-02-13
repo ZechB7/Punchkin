@@ -1,10 +1,23 @@
 const {DoorCard} = require('./Doorcard');
 const sequelize = require('../config/connection');
 
-class Monster extends DoorCard {}
+class Monster extends Model {}
 
 Monster.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+    },
     level: {
       type: DataTypes.INTEGER,
       allowNull: false,
