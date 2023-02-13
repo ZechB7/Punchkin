@@ -1,15 +1,43 @@
 [
-    {
-      "name": "Music Near Me",
-      "description": "A mobile app that will send you notifications whenever a concert is playing in your area."
-    },
-    {
-      "name": "The Ultimate Tech Quiz",
-      "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!"
-    },
-    {
-      "name": "Roll 'Em Up",
-      "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes."
-    }
-  ]
+  {
+    "name":"Potted Plant",
+    "description":"Elves draw and extra Treasure after defeating it.",
+    "cardType":"Monster",
+    "badStuff":"None. Escape is automatic",
+    "level":1,
+    "treasureValue":1
+  },
+  {
+    "name":"Maul Rat",
+    "description":"A creature from hell. +3 against Clerics.",
+    "cardType":"Monster",
+    "badStuff":"She whacks you. Lose 1 level",
+    "level":1,
+    "treasureValue":1
+  },
+  {
+    "name":"Lame Goblin",
+    "description":"+1 to Run Away",
+    "cardType":"Monster",
+    "badStuff":"He whacks you with his crutch. Lose 1 level",
+    "level":1,
+    "treasureValue":1
+  },
+  {
+    "name":"Squidzilla",
+    "description":"Slimy! Elves are at -4! Will not pursue anyone of level 4 or below except Elves.",
+    "cardType":"Monster",
+    "badStuff":"You are grabbed, slimed, crushed and gobbled. You are dead,dead,dead. Any questions?",
+    "level":18,
+    "treasureValue":4
+  },
+  {
+    "name":"Plutonium Dragon",
+    "description":"Will not pursue anyone of Level 5 or below.",
+    "cardType":"Monster",
+    "badStuff":"You are roasted and eaten.",
+    "level":20,
+    "treasureValue":4
+  }
+]
   

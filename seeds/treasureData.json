@@ -1,0 +1,47 @@
+[
+    {
+        "name":"Boots of Running Really Fasst",
+        "description":"Gives you +2 to run Away",
+        "category":"Footgear",
+        "bonus":2,
+        "price":400,
+        "keep":true,
+        "condition":false
+    },
+    {
+        "name":"Sandals of Protection",
+        "description":"Curse cards which you draw when kicking down a door have no effect. (curses cast by other players will still affect you.)",
+        "category":"Footgear",
+        "bonus":2,
+        "price":700,
+        "keep":true,
+        "condition":false
+    },
+    {
+        "name":"Helm of Courage",
+        "description":"",
+        "category":"Headgear",
+        "bonus":1,
+        "price":200,
+        "keep":true,
+        "condition":false
+    },
+    {
+        "name":"Hammer of Kneecapping",
+        "description":"",
+        "category":"1 hand",
+        "bonus":4,
+        "price":600,
+        "keep":true,
+        "condition":true
+    },
+    {
+        "name":"Flaming Armor",
+        "description":"",
+        "category":"Armor",
+        "bonus":2,
+        "price":400,
+        "keep":true,
+        "condition":false
+    }
+]
