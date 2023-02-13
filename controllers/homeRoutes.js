@@ -85,7 +85,7 @@ router.get('/playgame', (req, res) => {
     res.redirect('/login');
     return;
   }
-  res.render('playGame');
+  res.render('combat');
 });
 
 module.exports = router;
