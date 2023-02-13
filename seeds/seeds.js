@@ -25,17 +25,22 @@
 // seedDatabase();
 const sequelize = require('../config/connection');
 const { User } = require('../models');
+const Treasure = require('../models/Treasurecard');
+const Monster = require('../models/Monster');
+const monsterData = require('./monsterData.json');
+const treasureData = require('./treasureData.json');
 
 const userData = require('./userData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  const monsters = await Monster.bulkCreate(monsterData);
 
+  const treasures = await Treasure.bulkCreate(treasureData);
+  
+
+  
   process.exit(0);
 };
 seedDatabase();

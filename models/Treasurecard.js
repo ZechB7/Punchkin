@@ -1,4 +1,4 @@
-const { Model, DataTypes} = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Treasure extends Model {}
@@ -30,12 +30,12 @@ Treasure.init(
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      keep_discard: {
+      keep: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
       },
       condition: {
-        type: DataTypes.STRING,
+        type: DataTypes.BOOLEAN,
       },
     },
     {
@@ -45,5 +45,5 @@ Treasure.init(
         modelName: 'treasure',
     }
 );
-
+console.table(Treasure);
 module.exports = Treasure;

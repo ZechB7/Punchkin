@@ -2,7 +2,7 @@
   {
     "name":"Potted Plant",
     "description":"Elves draw and extra Treasure after defeating it.",
-    "cardType":"Monster",
+    "Type":"Monster",
     "badStuff":"None. Escape is automatic",
     "level":1,
     "treasureValue":1
@@ -10,7 +10,7 @@
   {
     "name":"Maul Rat",
     "description":"A creature from hell. +3 against Clerics.",
-    "cardType":"Monster",
+    "Type":"Monster",
     "badStuff":"She whacks you. Lose 1 level",
     "level":1,
     "treasureValue":1
@@ -18,7 +18,7 @@
   {
     "name":"Lame Goblin",
     "description":"+1 to Run Away",
-    "cardType":"Monster",
+    "Type":"Monster",
     "badStuff":"He whacks you with his crutch. Lose 1 level",
     "level":1,
     "treasureValue":1
@@ -26,7 +26,7 @@
   {
     "name":"Squidzilla",
     "description":"Slimy! Elves are at -4! Will not pursue anyone of level 4 or below except Elves.",
-    "cardType":"Monster",
+    "Type":"Monster",
     "badStuff":"You are grabbed, slimed, crushed and gobbled. You are dead,dead,dead. Any questions?",
     "level":18,
     "treasureValue":4
@@ -34,7 +34,7 @@
   {
     "name":"Plutonium Dragon",
     "description":"Will not pursue anyone of Level 5 or below.",
-    "cardType":"Monster",
+    "Type":"Monster",
     "badStuff":"You are roasted and eaten.",
     "level":20,
     "treasureValue":4
