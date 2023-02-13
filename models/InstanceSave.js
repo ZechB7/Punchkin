@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const {user} = require('./user')
+// const {user} = require('./user')
 
 
 class InstanceSave extends Model {}
@@ -13,14 +13,14 @@ InstanceSave.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    user_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      references: {
-        model: 'user',
-        key: 'name',
-      }
-    },
+    // user_name: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'user',
+    //     key: 'name',
+    //   }
+    // },
     level: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -38,7 +38,7 @@ InstanceSave.init(
       allowNull: false,
     },
     cards_in_hand: { //may need PostgreSQL
-      type: DataTypes.ARRAY,
+      type: DataTypes.STRING,
     }, 
     headgear: {
       type: DataTypes.STRING,
