@@ -13,14 +13,14 @@ class InstanceSave extends Model {}
 //       primaryKey: true,
 //       autoIncrement: true,
 //     },
-//     user_name: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//       references: {
-//         model: 'user',
-//         key: 'name',
-//       }
-//     },
+//     // user_name: {
+//     //   type: DataTypes.STRING,
+//     //   allowNull: false,
+//     //   references: {
+//     //     model: 'user',
+//     //     key: 'name',
+//     //   }
+//     // },
 //     level: {
 //       type: DataTypes.INTEGER,
 //       allowNull: false,
