@@ -85,7 +85,9 @@ router.get('/playgame', (req, res) => {
     res.redirect('/login');
     return;
   }
-  res.render('combat');
+  res.render('combat',{
+      logged_in: true
+    });
 });
 router.get('/scoreboard', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -93,6 +95,8 @@ router.get('/scoreboard', (req, res) => {
     res.redirect('/login');
     return;
   }
-  res.render('scoreboard');
+  res.render('scoreboard',{
+    logged_in: true
+  });
 });
 module.exports = router;
