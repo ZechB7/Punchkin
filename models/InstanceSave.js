@@ -37,8 +37,8 @@ InstanceSave.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    cards_in_hand: { //actually array in string form
-      type: DataTypes.STRING,
+    cards_in_hand: { //may need PostgreSQL
+      type: DataTypes.ARRAY,
     }, 
     headgear: {
       type: DataTypes.STRING,
