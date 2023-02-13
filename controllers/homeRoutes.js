@@ -78,12 +78,21 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
-router.get('/combat', (req, res) => {
+
+router.get('/playgame', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-  if (req.session.logged_in) {
-    res.redirect('/profile');
+  if (!req.session.logged_in) {
+    res.redirect('/login');
     return;
   }
-  res.render('playGame');
+  res.render('combat');
+});
+router.get('/scoreboard', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+    return;
+  }
+  res.render('scoreboard');
 });
 module.exports = router;
