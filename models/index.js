@@ -1,5 +1,6 @@
 const User = require('./User');
-const DoorCard = require('./Doorcard.js');
+const DoorCard = require('./Doorcard');
+const Monster = require('./Monster');
 const TreasureCard = require('./TreasureCard');
 const InstanceSave = require('./InstanceSave');
 
@@ -14,4 +15,4 @@ Project.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Project };
+module.exports = { User, Project, DoorCard, Monster };

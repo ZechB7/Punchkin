@@ -1,7 +1,7 @@
-const {DoorCard} = require('./Doorcard');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Monster extends DoorCard {}
+class Monster extends Model {}
 
 Monster.init(
   {
@@ -15,18 +15,24 @@ Monster.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
     },
     buff: {
       type: DataTypes.BOOLEAN,
     },
+    door_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'doorcard',
+        key: 'id',
+    },
   },
+},
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'doorcard',
+    modelName: 'monster',
   }
 );
 
