@@ -37,7 +37,7 @@ Monster.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'doorcard',
+    modelName: 'monster',
   }
 );
 
