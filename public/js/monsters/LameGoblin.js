@@ -15,5 +15,4 @@ class LameGoblin extends Monster {
   }
 }
 
-
 module.exports = LameGoblin;
