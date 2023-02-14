@@ -8,6 +8,15 @@ User.hasOne(InstanceSave, {
   onDelete: 'CASCADE'
 });
 
+// User.hasOne(InstanceSave, {
+//   foreignKey: 'user_name',
+//   onDelete: 'CASCADE'
+// });
+
+// User.belongsTo(InstanceSave, {
+//   foreignKey: 'user_name'
+// });
+
 InstanceSave.belongsTo(User, {
   foreignKey: 'user_id'
 });
