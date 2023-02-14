@@ -24,7 +24,11 @@
 
 // seedDatabase();
 const sequelize = require('../config/connection');
-const { User, Monster, Treasure } = require('../models');
+
+const { User } = require('../models');
+const Treasure = require('../models/Treasurecard');
+const Monster = require('../models/Monster');
+
 
 const userData = require('./userData.json');
 const monsterData = require('./monsterData.json');
@@ -43,7 +47,7 @@ const seedDatabase = async () => {
 
   await Treasure.bulkCreate(treasureData);
   console.log(`----Treasure seeds gleaming in Database----`);
-  
+
   process.exit(0);
 };
 seedDatabase();
