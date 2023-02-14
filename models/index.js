@@ -1,17 +1,32 @@
 const User = require('./User');
-const DoorCard = require('./Doorcard.js');
-const TreasureCard = require('./TreasureCard');
 const InstanceSave = require('./InstanceSave');
+const Treasure = require('./TreasureCard');
+const Monster = require('./Monster');
 
-const Project = require('./Project');
-
-User.hasMany(Project, {
+User.hasOne(InstanceSave, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Project.belongsTo(User, {
+// User.hasOne(InstanceSave, {
+//   foreignKey: 'user_name',
+//   onDelete: 'CASCADE'
+// });
+
+// User.belongsTo(InstanceSave, {
+//   foreignKey: 'user_name'
+// });
+
+InstanceSave.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Project };
+InstanceSave.hasMany(Treasure, {
+  foreignKey: 'treasure_id',
+});
+
+InstanceSave.hasMany(Monster, {
+  foreignKey: 'monster_id'
+});
+
+module.exports = { User, InstanceSave, Treasure, Monster};

@@ -1,21 +1,34 @@
-const {DoorCard} = require('./Doorcard');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Monster extends DoorCard {}
+class Monster extends Model {}
 
 Monster.init(
   {
-    level: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+    },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      
+    },
     treasureValue: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      
     },
     buff: {
       type: DataTypes.BOOLEAN,
@@ -26,7 +39,7 @@ Monster.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'doorcard',
+    modelName: 'monster',
   }
 );
 
