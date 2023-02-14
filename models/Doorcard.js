@@ -1,25 +1,27 @@
-const {DoorCard} = require('./Doorcard');
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Monster extends DoorCard {}
+class DoorCard extends Model {}
 
-Monster.init(
+DoorCard.init(
   {
-    level: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    treasureValue: {
-      type: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
     },
-    buff: {
-      type: DataTypes.BOOLEAN,
+    description: {
+      type: DataTypes.STRING,
     },
+    cardType: { //either Monster, gameClass, or Race
+        type: DataTypes.STRING,  
+    },
+   
   },
   {
     sequelize,
@@ -30,4 +32,4 @@ Monster.init(
   }
 );
 
-module.exports = Monster;
+module.exports = DoorCard;

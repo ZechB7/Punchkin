@@ -76,7 +76,7 @@ InstanceSave.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'instancesave',
+        modelName: 'player',
     }
 );
 

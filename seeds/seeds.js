@@ -24,11 +24,9 @@
 
 // seedDatabase();
 const sequelize = require('../config/connection');
-const { User, Monster, Treasure } = require('../models');
+const { User } = require('../models');
 
 const userData = require('./userData.json');
-const monsterData = require('./monsterData.json');
-const treasureData = require('./treasureData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -37,14 +35,6 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
-
-  await Monster.bulkCreate(monsterData);
-  console.log(`----Monster seeds festering in Database----`);
-
-  await Treasure.bulkCreate(treasureData);
-  console.log(`----Treasure seeds gleaming in Database----`);
-
-
 
   process.exit(0);
 };
