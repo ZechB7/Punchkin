@@ -24,9 +24,11 @@
 
 // seedDatabase();
 const sequelize = require('../config/connection');
+
 const { User } = require('../models');
 const Treasure = require('../models/Treasurecard');
 const Monster = require('../models/Monster');
+
 
 const userData = require('./userData.json');
 const monsterData = require('./monsterData.json');
