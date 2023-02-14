@@ -37,6 +37,19 @@ User.init(
       },
     },
     //wins and losses
+    wins: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      defaultValue: 0,
+    },
+    losses: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      defaultValue: 0,
+    },
+    
   },
   {
     hooks: {
