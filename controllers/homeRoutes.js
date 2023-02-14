@@ -35,13 +35,13 @@ router.get('/treasure/:id', async (req, res) => {
         id: req.params.id,
       }
     });
-    res.status(200).json(projectData);
-    // const project = projectData.get({ plain: true });
-
-    // // res.render('project', {
-    // //   ...project,
-    // //   logged_in: req.session.logged_in
-    // // });
+    const project = projectData.get({ plain: true });
+    console.log(project)
+    // res.status(200).json(project);
+    res.render('combat', {
+      project,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
