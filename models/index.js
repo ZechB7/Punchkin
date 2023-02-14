@@ -2,6 +2,16 @@ const User = require('./User');
 const InstanceSave = require('./InstanceSave');
 const Treasure = require('./TreasureCard');
 const Monster = require('./Monster');
+const Project = require('./Project');
+
+User.hasMany(Project, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
+
+Project.belongsTo(User, {
+  foreignKey: 'user_id'
+})
 
 User.hasOne(InstanceSave, {
   foreignKey: 'user_id',
