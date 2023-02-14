@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User } = require('../models');
+const { Project, User , Treasure} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,21 +27,19 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/treasure/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
+
+    const projectData = await Treasure.findOne({
+      where: {
+        id: req.params.id,
+      }
     });
-
     const project = projectData.get({ plain: true });
-
-    res.render('project', {
-      ...project,
+    console.log(project)
+    // res.status(200).json(project);
+    res.render('combat', {
+      project,
       logged_in: req.session.logged_in
     });
   } catch (err) {
