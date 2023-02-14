@@ -30,7 +30,7 @@ Treasure.init(
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      keep: {
+      keep_discard: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
       },
