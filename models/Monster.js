@@ -1,8 +1,7 @@
-// const {DoorCard} = require('./Doorcard');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Monster extends /*DoorCard*/ Model {}
+class Monster extends Model {}
 
 Monster.init(
   {
@@ -38,7 +37,6 @@ Monster.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    //modelName: 'doorcard',
     modelName: 'monster',
   }
 );
