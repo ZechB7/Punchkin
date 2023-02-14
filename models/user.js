@@ -19,6 +19,7 @@ User.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      primaryKey: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -35,6 +36,7 @@ User.init(
         len: [8],
       },
     },
+    //wins and losses
   },
   {
     hooks: {
