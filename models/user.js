@@ -1,12 +1,18 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
+const simplecrypt = require('simplecrypt');
 const sequelize = require('../config/connection');
+var sc = simplecrypt();
 
 class User extends Model {
   checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
+    if (loginPw === sc.decrypt(this.password)) {
+      return true
+    } else {
+      return false
+    }
   }
 }
+// return sc.compareSync(loginPw, this.password);
 
 User.init(
   {
@@ -49,16 +55,16 @@ User.init(
       primaryKey: true,
       defaultValue: 0,
     },
-    
+
   },
   {
     hooks: {
       beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.password = await sc.encrypt(newUserData.password);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        updatedUserData.password = await sc.encrypt(updatedUserData.password);
         return updatedUserData;
       },
     },
