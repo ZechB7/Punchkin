@@ -2,6 +2,7 @@ const {Monster} = require('../../models/Monster');
 const sequelize = require('../../config/connection');
 
 class LameGoblin extends Monster {
+  
 
   buff() {
     //set player runaway stats +1 in local memory
@@ -13,6 +14,5 @@ class LameGoblin extends Monster {
     //player level -1 level
   }
 }
-
 
 module.exports = LameGoblin;
