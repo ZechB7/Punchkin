@@ -29,3 +29,26 @@
 //              Look for Trouble: play MONSTER CARD from hand//
 //              Loot the Room: draw DOOR CARD to hand)
 
+
+//UPDATED BATTLE:
+// on load: user gets 2 random treasure cards 
+// // // const pick = Math.floor(Math.random() * 5) + 1; //////(returns values 1-5)
+// cards pulled with const treasure = await Treasurecard.findOne({where: { id: `${pick}`}}); //////or something like that
+// user may equip or discard treasure cards
+// user must discard if too many cards (disable all buttons except discard if player too many cards)
+// door kick draws monster 
+// *equip OR hold OR discard treasure cards. Default hold.
+// math.random to pick monster id findOne where id: = pick
+
+// user can fight or flee (switch)
+
+// if flee, math.random to "roll die", add buffs, do comparison
+
+// if fight, compare stength = level + bonus vs. monster level
+
+// // // if caught, lose. if get away, no treasure, back to the top
+
+// if win, get treasure (using same code above) * however many treasures are on the monster card, level goes up by 1 or more according to monster card
+
+// if lose, then bad stuff (usually down 1 level, maybe other things)
+
