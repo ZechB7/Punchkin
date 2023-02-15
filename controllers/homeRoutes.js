@@ -47,6 +47,28 @@ router.get('/demo', async (req, res) => {
   }
 });
 
+router.get('/treasures', async (req, res) => {
+  try {
+
+    const treasureData = await Treasure.findAll();
+    const treasures = treasureData.map((treasure) =>
+      treasure.get({ plain: true })
+    );
+    console.log(treasures);
+
+    res.status(200).json(treasures);
+    console.log("All Monsters: " + JSON.stringify(treasures));
+    console.log("One Monster: " + JSON.stringify(treasures[1]));
+    console.log("Should read Maul Rat:" + treasures[1].name);
+    // res.render('combat', {
+    //   ...treasures,
+    //   logged_in: req.session.logged_in
+    // });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/treasure/:id', async (req, res) => {
   try {
 

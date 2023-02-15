@@ -26,7 +26,7 @@
 const sequelize = require('../config/connection');
 
 const { User } = require('../models');
-const Treasure = require('../models/Treasurecard');
+const Treasure = require('../models/TreasureCard');
 const Monster = require('../models/Monster');
 
 

@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const {user} = require('./user')
+const {user} = require('./User')
 
 class InstanceSave extends Model {}
 

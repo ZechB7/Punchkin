@@ -10,7 +10,7 @@ class PottedPlant extends Monster {
   }
 
   badStuff() {
-    console.log("You walked away from the plant.")
+    console.log("You walked away from the plant. Great job!")
   }
 }
 
