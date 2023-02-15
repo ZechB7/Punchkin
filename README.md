@@ -4,12 +4,13 @@
 A rendition of the Munchikin game by Steve Jackson. 
 
 ## Table of Contents
-* [Wireframe](#Wireframe)
+* [Wireframe](#wireframe)
 * [Installation](#installation)
 * [Usage](#usage) 
+* [Future Development](#future-development)
 * [License](#license)
-* [Questions and Contributing](<#Questions and Contributing>)
-* [Deployment](#Deployment)
+* [Questions and Contributing](#questions-and-contributing)
+* [Deployment](#deployment)
 
 ## Wireframe
 [Figma](https://www.figma.com/file/2D5urK6kLu8lUUvuaFahwF/Munchkin-by-Punchkins?node-id=0%3A1&t=MdM5GEmrnJlCagDx-1)
@@ -23,13 +24,21 @@ mysql is also required to be installed to run this locally.
 To start the server locally fisrt follow the installation instructions above then run the following commands:\
 First go into .env and add user as root and password for your mysql\
 Inside the db folder run 'mysql -u root -p' --> 'SOURCE schema.sql'\
-On package.json run 'npm start' or use 'nodemon server.js'
+On package.json run 'npm start' or use 'nodemon server.js'\
+When creating a password it needs to be at least eight characters long\
+In this first iteration the game play is not functioning so to see a demo replace .com/profile or the other pages with /demo and reload the page to see different information.
 
 ![punckin homepage](./assets/punch-homepage.png?raw=true)\
 ![punckin login](./assets/punch-login.png?raw=true)\
 ![punckin profile](./assets/punch-profile.png?raw=true)\
 ![punckin playgame](./assets/punch-playgame.png?raw=true)
 
+## Future Development
+* Add the game logic so that the game can be played
+* More efficient data strategy-pull cards from database, then handle completely within front-end javascript
+* Add more of the cards from the original game
+* Add multiplayer and single player playable options
+* Work on the styling of the pages, add graphics, etc.
 
 ## Deployment
 This repo is hosted on Heroku\
