@@ -25,9 +25,15 @@ First go into .env and add user as root and password for your mysql\
 Inside the db folder run 'mysql -u root -p' --> 'SOURCE schema.sql'\
 On package.json run 'npm start' or use 'nodemon server.js'
 
+![punckin homepage](./assets/punch-homepage.png?raw=true)\
+![punckin login](./assets/punch-login.png?raw=true)\
+![punckin profile](./assets/punch-profile.png?raw=true)\
+![punckin playgame](./assets/punch-playgame.png?raw=true)
+
+
 ## Deployment
 This repo is hosted on Heroku\
-[link heroku here]()
+[Heroku](https://punchkin.herokuapp.com/)
 
 ## License
 This project is licensed under the MIT license.
