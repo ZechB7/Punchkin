@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User , Treasure} = require('../models');
+const { Project, User , Monster,  Treasure} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,19 +27,81 @@ router.get('/', async (req, res) => {
   }
 });
 
+router.get('/demo', async (req, res) => {
+  try {
+    RandoId = Math.floor(Math.random() * 5) + 1
+    const monsterData = await Monster.findOne({
+      where: {
+        id: RandoId,
+      }
+    });
+    const monster = monsterData.get({ plain: true });
+    console.log(monster)
+    // res.status(200).json(monster);
+    res.render('combat', {
+      monster,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/treasure/:id', async (req, res) => {
   try {
 
-    const projectData = await Treasure.findOne({
+    const treasureData = await Treasure.findOne({
       where: {
         id: req.params.id,
       }
     });
-    const project = projectData.get({ plain: true });
-    console.log(project)
-    // res.status(200).json(project);
+    const treasure = treasureData.get({ plain: true });
+    console.log(treasure)
+    // res.status(200).json(treasure);
     res.render('combat', {
-      project,
+      treasure,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/monsters', async (req, res) => {
+  try {
+
+    const monsterData = await Monster.findAll();
+    const monsters = monsterData.map((monster) =>
+      monster.get({ plain: true })
+    );
+    console.log(monsters);
+
+    res.status(200).json(monsters);
+    console.log("All Monsters: " + JSON.stringify(monsters));
+    console.log("One Monster: " + JSON.stringify(monsters[1]));
+    console.log("Should read Maul Rat:" + monsters[1].name);
+    // res.render('combat', {
+    //   ...monsters,
+    //   logged_in: req.session.logged_in
+    // });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/monster/:id', async (req, res) => {
+  try {
+
+    const monsterData = await Monster.findOne({
+      where: {
+        id: req.params.id,
+      }
+    });
+    const monster = monsterData.get({ plain: true });
+    console.log(monster)
+    // res.status(200).json(monster);
+    res.render('combat', {
+      monster,
       logged_in: req.session.logged_in
     });
   } catch (err) {

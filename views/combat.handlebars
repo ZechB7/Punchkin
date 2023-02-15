@@ -11,36 +11,36 @@
       </br>
   <div style=" ">
       <div  id="HeadGear" class="row bg-danger p-3 rounded">
-        <h3 id="h_name">{{project.name}}</h3>
-        <a>Bonus: <span id="h_bonus"></span></h4>
-        <a>Descript: <span id="h_description"></span></a>
-        <a>Value: $<span id="h_Price">1000</span></a>
+        <h3 id="h_name">{{treasure.name}}</h3>
+        <a>Bonus: <span id="h_bonus">{{treasure.bonus}}</span></a>
+        <a>Descript: <span id="h_description">{{treasure.description}}</span></a>
+        <a>Value: $<span id="h_Price">{{treasure.price}}</span></a>
       </div>
       </br>
       <div id="RightHand" class="row bg-danger p-3 rounded">
         <h3 id="rh_name">RightHand</h3>
-        <a>Bonus: <span id="rh_bonus"></span></h4>
+        <a>Bonus: <span id="rh_bonus"></span></a>
         <a>Descript: <span id="rh_description"></span></a>
         <a>Value: $<span id="rh_Price">1000</span></a>
       </div>
       </br>
       <div  id="LeftHand" class="row bg-danger p-3 rounded">
         <h3 id="lh_name">LeftHand</h3>
-        <a>Bonus: <span id="lh_bonus"></span></h4>
+        <a>Bonus: <span id="lh_bonus"></span></a>
         <a>Descript: <span id="lh_description"></span></a>
         <a>Value: $<span id="lh_Price">1000</span></a>
       </div>
       </br>
       <div  id="Armor" class="row bg-danger p-3 rounded">
         <h3 id="a_name">Armor</h3>
-        <a>Bonus: <span id="a_bonus"></span></h4>
+        <a>Bonus: <span id="a_bonus"></span></a>
         <a>Descript: <span id="a_description"></span></a>
         <a>Value: $<span id="a_Price">1000</span></a>
       </div>
       </br>
       <div  id="FootGear"  class="row bg-danger p-3 rounded">
         <h3 id="f_name">FootGear</h3>
-        <a>Bonus: <span id="f_bonus"></span></h4>
+        <a>Bonus: <span id="f_bonus"></span></a>
         <a>Descript: <span id="f_description"></span></a>
         <a>Value: $<span id="f_Price">1000</span></a>
       </div>
@@ -48,10 +48,10 @@
   </div>
     <div class="col-8 justify-content-center">
       <div  id="DoorCard" class="row bg-warning text-center p-3 rounded"  style="height: 100%">
-        <h3 id="m_name">Lame Goblin</h3>
-        <h3>Level: <span id="m_level">1</span></h3>
-        <a>Bad Stuff: <span id="m_badStuff">lose a treasure or turn</span></a>
-        <a>Treasures Recieved: <span id="m_treasure">1</span></a>
+        <h3 id="m_name">{{monster.name}}</h3>
+        <h3>Level: <span id="m_level">{{monster.level}}</span></h3>
+        <a>Description: <span id="m_badStuff">{{monster.description}}</span></a>
+        <a>Treasures Recieved: <span id="m_treasure">{{monster.treasureValue}}</span></a>
       </div>
     </div>
     </div>

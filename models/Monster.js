@@ -11,10 +11,24 @@ Monster.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING,
+    },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      
+    },
     treasureValue: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
+      
     },
     buff: {
       type: DataTypes.BOOLEAN,
