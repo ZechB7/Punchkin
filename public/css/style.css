@@ -1,3 +1,7 @@
+#background{
+background-color:#fffbf0
+}
+
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
